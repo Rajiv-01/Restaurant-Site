@@ -8,12 +8,14 @@ menuBtn.addEventListener('click', () => {
   if(!menuOpen) {
     menuBtn.classList.add('open');
     menuOpen = true;
-    tophead.style.top = "40px";
+    tophead.style.transform = 'translateY(0px)'
+    tophead.style.background = 'rgba(0,76,71,0.9)';
     menubar.style.transform = "translateY(0px)";
   } else {
     menuBtn.classList.remove('open');
     menuOpen = false;
-    tophead.style.top = "-60px";
-    menubar.style.transform = "translateY(-30px)";
+    tophead.style.transform = 'translateY(-100px)';
+    tophead.style.background = 'transparent';
+    menubar.style.transform = "translateY(-40px)";
   }
 });

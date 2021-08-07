@@ -8,35 +8,39 @@ body{
 	position: relative;
 	background-image: url("images/food hero.jpg");
 	background-size: cover;
+	height: 100vh;
 	color: white;
 }
 .top-header{
 	position: relative;
-	padding: 0 0 40px 0;
-	border-bottom: 3px solid cyan;
-	top: -60px;
+	padding: 0 0 20px 0;
+	border-bottom: 3px solid darkgoldenrod;
+	background: transparent;
+	transform:translateY(-100px);
 	transition: all 0.5s ease-in-out;
+	z-index: 5;
+	height: 160px;
 
 }
 #menu-bar{
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	transform: translateY(-30px);
-	transition: all 0.7s ease-in-out;
+	transform: translateY();
+	transition: all 0.8s ease-in-out;
 }
 .menu-items{
 	display:inline-block;
 	color: #bbb;
-	padding: 25px 30px;
+	padding: 60px 30px;
 	font-size: 1.5rem;
 	cursor: pointer;
 	transition: all 0.3s;
 }
 .menu-items:hover{
 	color: #fff;
-	padding:20px 30px 30px 30px ;
-	text-shadow: 0 0 2px #fff;
+	padding:50px 30px 30px 30px ;
+	text-shadow: 0 0 10px #fff;
 }
 
 .hamburger{
@@ -45,9 +49,9 @@ body{
 	justify-content: center;
 	align-items: center;
 	left: 50%;
-	bottom: -53%;
+	bottom: -39%;
 	transform: translate(-50%,-50%);
-	border: 3px solid cyan;
+	border: 3px solid darkgoldenrod;
 	border-radius: 100%;
 	background: white;
 	height: 60px;
@@ -88,6 +92,59 @@ body{
 	transform: rotate(-45deg) translate(-7.5px,-7.5px);
 }
 .hamburger.open .hamburger-bars{
-	 transform: translateX(10px);
+	 transform: translateX(-11px) rotate(180deg);
 	 background: transparent;
+}
+.logo{
+	position: absolute;
+	bottom: -35%;
+	left: 5%;
+}
+.social-tags{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: -18%;
+	right: 5%;
+	width: 200px;
+}
+.social-tags a{
+	background: goldenrod;
+	padding: 10px;
+	margin: 5px auto;
+	border-radius: 30px;
+	font-size: 1.5rem;
+	color: white;
+}
+.social-tags i{
+	text-shadow: 0 0 2px black;
+	transition: all 0.15s ease-in-out;
+}
+.social-tags i:nth-child(2){
+	padding: 15px ;
+}
+.social-tags i:hover {
+	transform: scale(1.25);	
+}
+.social-tags a:hover{
+	border: 2px solid white;
+	padding: 8px;
+}
+.hero-message{
+	position: absolute;
+	right: 20%;
+	bottom: 30% ;
+	font-size: 2rem;
+}
+#order-button{
+	position: absolute;
+	padding: 15px;
+	width: 300px;
+	background: goldenrod;
+	margin: 25px 0 0 0px;
+	border: none;
+	color: #004c47;
+	font-size: 1.3rem;
+	box-shadow: 0 0 5px navajowhite;
 }

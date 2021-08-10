@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
 *{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
 }
-body{
+header{
 	position: relative;
 	background-image: url("images/food hero.jpg");
 	background-size: cover;
+	background-attachment: fixed;
 	height: 100vh;
 	color: white;
 }
@@ -107,7 +110,7 @@ body{
 	position: absolute;
 	bottom: -18%;
 	right: 5%;
-	width: 200px;
+	width: 250px;
 }
 .social-tags a{
 	background: goldenrod;
@@ -120,9 +123,6 @@ body{
 .social-tags i{
 	text-shadow: 0 0 2px black;
 	transition: all 0.15s ease-in-out;
-}
-.social-tags i:nth-child(2){
-	padding: 15px ;
 }
 .social-tags i:hover {
 	transform: scale(1.25);	
@@ -139,12 +139,60 @@ body{
 }
 #order-button{
 	position: absolute;
-	padding: 15px;
-	width: 300px;
+	padding: 15px 20px 15px 0px;
+	width: 275px;
 	background: goldenrod;
 	margin: 25px 0 0 0px;
 	border: none;
 	color: #004c47;
 	font-size: 1.3rem;
 	box-shadow: 0 0 5px navajowhite;
+}
+.fa-utensils{
+	position: absolute;
+	animation: jump 0.5s ease-in-out infinite;
+
+}
+@keyframes jump {
+	0%{padding-top: 0px;}
+	25%{padding-top: 2.5px;}
+	50%{padding-top: 5px;}
+	75%{padding-top: 2.5px;}
+	100%{padding-top: 0px;}
+}
+.org-menu::before{
+   content: " ";
+   height: 20px;
+   width: 100%;
+   background: linear-gradient(45deg,#9E4C0A,goldenrod,white);
+   display: block;
+}
+
+.org-menu h1{
+	color: #004c47;
+	font-size: 4rem;
+	font-family: 'Style Script', cursive;
+	padding: 25px;
+}
+.menu-slides{
+	display: flex;
+	overflow-x:scroll;
+	justify-content: safe start;
+	align-items: center;
+	background: purple;
+}
+.menu-slide{
+	display: inline-block;
+	position: relative;
+	background: black;
+	height: 100px;
+	width: 200px;
+	margin: 10px;
+	border-radius: 10px;
+}
+.menu-slide img{
+	height: inherit;
+	width: inherit;
+	border-radius: 10px;
+	border: 2px solid #004c47;
 }

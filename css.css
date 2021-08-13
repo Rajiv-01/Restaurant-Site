@@ -6,6 +6,10 @@
 	padding: 0;
 	scroll-behavior: smooth;
 }
+body{
+	overflow-x: hidden;
+	position: relative;
+}
 header{
 	position: relative;
 	background-image: url("images/food hero.jpg");
@@ -175,18 +179,32 @@ header{
 	padding: 25px;
 }
 .menu-slides{
+	position: relative;
 	display: flex;
-	overflow-x:scroll;
+	overflow-x:auto;
 	justify-content: safe start;
 	align-items: center;
-	background: purple;
+	scroll-behavior: smooth;
+	background: goldenrod;
+}
+.arrows{
+	font-size: 1.8rem;
+	position: absolute;
+	color: rgba(0, 0, 0, .6);z-index:2;
+	transform: translateY(-30px);
+}
+#left-arrow{
+	left: 5px;
+}
+#right-arrow{
+	right: 5px;
 }
 .menu-slide{
 	display: inline-block;
 	position: relative;
 	background: black;
-	height: 100px;
-	width: 200px;
+	height: 75px;
+	width: 150px;
 	margin: 10px;
 	border-radius: 10px;
 }
@@ -195,4 +213,14 @@ header{
 	width: inherit;
 	border-radius: 10px;
 	border: 2px solid #004c47;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.menu-slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.menu-slides {
+  -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
 }

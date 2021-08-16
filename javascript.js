@@ -19,3 +19,26 @@ menuBtn.addEventListener('click', () => {
     menubar.style.transform = "translateY(-40px)";
   }
 });
+const menucontainer=document.querySelector(".menu-container");
+let firstmenu=document.querySelector(".first");
+let secondmenu=document.querySelector(".second");
+menucontainer.addEventListener('scroll',function(event){
+  scroll=menucontainer.scrollLeft;
+  if (scroll>250) {
+      firstmenu.style.transform = 'scale(0.8)'
+      firstmenu.style.boxShadow = 'none'
+      firstmenu.style.opacity = '0.6'
+  }
+  else {
+     firstmenu.style.transform = 'scale(1.15)'
+    firstmenu.style.boxShadow = '0 0 100px black'
+    firstmenu.style.opacity = '1'
+  }
+  if(scroll >250 && scroll < 650 ){
+    secondmenu.classList.add('scale-menu');
+  }
+  else {
+    secondmenu.classList.remove('scale-menu');
+  }
+
+} );

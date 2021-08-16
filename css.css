@@ -224,3 +224,44 @@ header{
   -ms-overflow-style: none;  /* IE and Edge */
    scrollbar-width: none;  /* Firefox */
 }
+/*.menu-container{
+	background: url("images/specialmenu.png");
+	background-size:contain;
+	width: 400px;
+	height: 600px;
+
+}*/
+.menu-container::-webkit-scrollbar{
+	display: none;
+}
+.menu-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow-x: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	margin: 50px auto;
+	padding: 50px;
+	background: rgba(0, 0, 0, 0.6);
+}
+.menubook{
+	margin: 0 20px;
+	transform: scale(0.8);
+	transition: all 0.2s ease-in-out;
+	opacity: 0.6;
+}
+.menubook:first-child{
+	margin-left: 35%;
+	transform: scale(1.15);
+	box-shadow: 0 0 100px black;
+	opacity: 1;
+}
+.menubook:last-child{
+	margin-right: 35%;
+}
+.second.scale-menu{
+	transform: scale(1.15);
+	box-shadow: 0 0 100px black;
+	opacity: 1;
+}

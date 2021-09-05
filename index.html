@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -142,7 +153,183 @@
 		</div>
 	</div>
 
+<!-- ORDER TABLE -->
+
+<div class="order-table">
+    <h1><center>Your Order</center></h1>
+    <div class="table">
+              <span style="font-size: 1.6rem;">SELECT YOUR MENU: <br></span>
+              <select name="order" id="order">
+                <option value="special">Special</option>
+                <option value="combos">Combos</option>
+                <option value="indian">Indian</option>
+                <option value="seafood">Sea-Food</option>
+                <option value="mexican">Mexican</option>
+                <option value="chinese">Chinese</option>
+                <option value="italian">Italian</option>
+                <option value="sweet">Sweet</option>
+                <option value="beverages">Beverages</option>
+                <option value="bakery">Bakery</option>
+                <option value="soup">Soup</option>
+               </select>
+    </div>
+    <form id="table-menu">
+    	<fieldset>
+    		 <legend>SPECIAL</legend>
+    <div class="items-table">
+    <div class="maincourse">
+    	<h2>Maincourse</h2>
+    	<div>
+      <input type="checkbox" id="item1" name="menu" value="item1">
+      <label for="item1">Item1</label>
+    </div>
+    <div>
+       <input type="checkbox" id="item2" name="menu" value="item2">
+      <label for="item2">Item2</label>
+    </div>
+    <div>
+     <input type="checkbox" id="item3" name="menu" value="item3">
+      <label for="item3">Item3</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item4" name="menu" value="item4">
+      <label for="item4">Item4</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item5" name="menu" value="item5">
+      <label for="item5">Item5</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item6" name="menu" value="item6">
+      <label for="item6">Item6</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item7" name="menu" value="item7">
+      <label for="item7">Item7</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item8" name="menu" value="item8">
+      <label for="item8">Item8</label>
+    </div>
+    	<div>
+      <input type="checkbox" id="item9" name="menu" value="item9">
+      <label for="item9">Item9</label>
+    </div>
+    	<div>
+      <input type="checkbox" id="item10" name="menu" value="item10">
+      <label for="item10">Item10</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item11" name="menu" value="item11">
+      <label for="item11">Item11</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item12" name="menu" value="item12">
+      <label for="item12">Item12</label>
+    </div>
+  </div>
+    <div class="sidecourse">
+    	<h2>Starters</h2>
+    	<div>
+      <input type="checkbox" id="item13" name="menu" value="item13">
+      <label for="item13">Item13</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item14" name="menu" value="item14">
+      <label for="item14">Item14</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item15" name="menu" value="item15">
+      <label for="item15">Item15</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item16" name="menu" value="item16">
+      <label for="item16">Item16</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item17" name="menu" value="item17">
+      <label for="item17">Item17</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item18" name="menu" value="item18">
+      <label for="item18">Item18</label>
+    </div>
+  </div>
+  <div class="drinksitem">
+  	<h2> Beverages</h2>
+    <div>
+      <input type="checkbox" id="item19" name="menu" value="item19">
+      <label for="item19">Item19</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item20" name="menu" value="item20">
+      <label for="item20">Item20</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item21" name="menu" value="item21">
+      <label for="item21">Item21</label>
+    </div>
+    <div>
+      <input type="checkbox" id="item22" name="menu" value="item22">
+      <label for="item22">Item22</label>
+    </div>
+  </div>
+  </div>
+  <button id="confirm" >ORDER</button>
+    	</fieldset>	
+    </form>
+     
+</div>
+
+
+<!-- Add your address for order -->
+
+
+<div class="add-address" id="add-address">
+	<button id="cross"><i class="fas fa-times"></i></button>
+	<h1>Add Addres</h1>
+	<div><label for="name">Name :</label>
+	<input type="text" name="name" ></div>
+	<div><label for="phone">Mobile No :</label>
+	<input type="tel" name="phone" pattern="[1-9]{1}[0-9]{9}" onkeypress="return onlyNumberKey(event)"></div>
+	<div><label for="email">E-mail :</label>
+	<input type="email" name="email"></div>
+	<div>
+	<label for="address">Address :</label>
+	<span id="address">
+	 <input type="street" 
+         class="form-control" 
+         id="autocomplete" 
+         placeholder="Street">
+  
+  <input type="city" 
+         class="form-control" 
+         id="inputCity" 
+         placeholder="City">
+  <input type="zip" 
+         class="form-control" 
+         id="inputZip" 
+         placeholder="Zip">
+         
+  <input type="state" 
+         class="form-control" 
+         id="inputState" 
+         placeholder="State">
+  
+  <input type="country" 
+         class="form-control" 
+         id="inputCountry" 
+         placeholder="Country">
+</span>
+</div> 
+<input type="checkbox" id="termscheck"
+ onchange= "checkbox_checked(this)">
+      <p for="termscheck" id="termscheckp">I hereby declare that above all information is correct. </p>
+ <button id="address-button">Add Address</button>
+</div>
+
 <!-- ABOUT OUR CHEFS -->
+
 
 	<div class="our-chefs">
 		<h1><center>Our Chefs</center></h1>
@@ -210,21 +397,42 @@
 	</div>
 
 <!-- BRANCHES --->
+
 <div class="our-branches">
 	<h1><center>Our Branches</center></h1>
+	<h3>We have multiple branches all over the major cities. <br> Just open up the map and explore our Restaurants</h3>
     <div class="all-branches">
-    	<div class="branch branch1">
-    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quaerat quasi, dolorum, ad corrupti consectetur repellat nam ipsum natus eligendi, accusantium vel illo perferendis fugiat et ducimus sit fuga magni?
+    	<div class="branch" id="branch1">
+        <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=453&amp;height=300&amp;hl=en&amp;q=Mumbai&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div></div>
+    	<span class="locname"><center>Mumbai</center></span>
         </div>
     	<div class="branch branch2">
-    		Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi praesentium eligendi, quod. Dignissimos debitis non, pariatur aspernatur quae consequuntur, voluptatibus veritatis quis eligendi accusantium laudantium quod, impedit nesciunt illum exercitationem.
+    		<div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=453&amp;height=300&amp;hl=en&amp;q=delhi&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div></div>
+    	 <span class="locname"><center>Delhi</center></span>
     	</div>
     	<div class="branch branch3">
-    	Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Iure architecto quis ipsum, ab exercitationem nostrum officiis, incidunt numquam, magnam hic alias obcaecati? Neque facilis reprehenderit est ducimus nesciunt deleniti repellendus?
+    		<div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=453&amp;height=300&amp;hl=en&amp;q=punjab&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div></div>
+    	<span class="locname"><center>Punjab</center></span>
         </div>
-        <div class="branch branch4">Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolor repellat eaque in assumenda rem deserunt ipsam nesciunt enim sint consequuntur voluptas error iste obcaecati, nihil esse incidunt deleniti atque.</div>
+        <div class="branch branch4">
+        	<div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=453&amp;height=300&amp;hl=en&amp;q=banglore&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div></div>
+        <span class="locname"><center>Bangalore</center></span>
+        </div>
+    </div>
+    <div id="footer">
+    	us
     </div>
 </div>
 </body>
 <script type="text/javascript" src="javascript.js"></script>
+<script>
+    function onlyNumberKey(evt) {
+          
+        // Only ASCII character in that range allowed
+        var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+            return false;
+        return true;
+    }
+</script>
 </html>

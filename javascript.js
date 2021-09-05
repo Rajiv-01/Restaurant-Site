@@ -151,3 +151,26 @@ menucontainer.addEventListener('scroll',function(event){
   }
 
 } );
+buttonadd=document.getElementById("address-button")
+function checkbox_checked(chk){
+  if(chk.checked){
+    buttonadd.style.background = 'dodgerblue';
+  buttonadd.style.opacity = '1';
+  buttonadd.style.color = 'white';
+}
+  else {
+    buttonadd.style.background = '#ddd';
+     buttonadd.style.opacity = '0.3';
+       buttonadd.style.color = 'black';
+   }
+};
+var address=document.getElementById("add-address");
+var crossaddress=document.getElementById("cross");
+var orderadd=document.getElementById("confirm");
+orderadd.addEventListener('click', (event) => {
+  address.style.display = 'flex';
+  event.preventDefault();
+})
+crossaddress.addEventListener('click', () => {
+  address.style.display = 'none';
+});
